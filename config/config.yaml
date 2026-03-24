@@ -104,7 +104,9 @@ rss:
   freshness_filter:
     enabled: true                     # 是否启用新鲜度过滤（默认启用）
 
-    max_age_days: 30                   # 最大文章年龄（天）
+freshness_filter:
+    enabled: true
+    max_age_days: 30                # 最大文章年龄（天）
                                       # - 正整数：只推送 N 天内的文章
                                       # - 0：禁用过滤，推送所有文章
 
@@ -112,16 +114,22 @@ rss:
   # - 不配置：使用全局 freshness_filter.max_age_days（默认 3 天）
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
-  feeds:
-    - id: "hacker-news"
-      name: "Hacker News"
-      url: "https://hnrss.org/frontpage"
+feeds:
+    - id: "proveg-official"
+      name: "ProVeg普罗维植官方"
+      url: "https://rsshub.app/wechat/msgalbum/MzkxMzM4MTk3OQ==/1"
 
-    - id: "ruanyifeng"
-      name: "阮一峰的网络日志"
-      url: "http://www.ruanyifeng.com/blog/atom.xml"
-      enabled: false                  # 禁用
-      # max_age_days: 3               # 示例：推送 3 天内的文章（更新较慢的博客）
+    - id: "plant-based-news"
+      name: "植物基资讯"
+      url: "https://rsshub.app/wechat/msgalbum/MzI1NDM0NjI1OQ==/1"
+
+    - id: "food-industry"
+      name: "小食代"
+      url: "https://rsshub.app/wechat/msgalbum/MzI5ODU0MTA0Mw==/2"
+
+    - id: "food-daily"
+      name: "每日食品"
+      url: "https://rsshub.app/wechat/msgalbum/MzI0ODAxNTEyMw==/1"
      
     - id: "yahoo-finance"
       name: "雅虎财经"
@@ -151,7 +159,7 @@ rss:
 # - incremental：最少打扰，只看新增
 # ===============================================================
 report:
-  mode: "current"                     # daily | current | incremental（schedule 开启时作为默认值）
+  mode: "daily"                     # daily | current | incremental（schedule 开启时作为默认值）
 
   display_mode: "keyword"             # 分组维度: keyword | platform
                                       # keyword: 按关键词分组显示（默认）
