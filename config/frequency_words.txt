@@ -1,3 +1,4 @@
 ProVeg
 普罗维植
-小米
+proveg
+PROVEG
